@@ -1,0 +1,109 @@
+/* Marindze Consultoria & Serviços, E.I. — estilos base */
+:root{
+  --azul:#042C54;--azul-2:#0A3D73;--azul-3:#06213F;
+  --laranja:#FC6C04;--laranja-2:#E15F00;
+  --branco:#FFFFFF;--cinza:#E9EEF4;--texto:#1B2A3D;--texto-suave:#52627A;
+  --raio:14px;--sombra:0 10px 30px rgba(4,44,84,.12);
+  --fonte:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --max:1160px;--header-h:88px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--fonte);color:var(--texto);background:var(--branco);line-height:1.6;font-size:1.0625rem}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em;color:var(--azul)}
+p{margin:0 0 1em}
+.container{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+.icon{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.skip{position:absolute;left:-999px;top:0;background:var(--laranja);color:#fff;padding:.7rem 1rem;z-index:100;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer;font-size:1rem}
+.btn-primary{background:var(--laranja);color:#fff;box-shadow:0 8px 20px rgba(252,108,4,.35)}
+.btn-primary:hover{background:var(--laranja-2);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+/* Cabeçalho */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--cinza)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;min-height:var(--header-h);gap:1rem}
+.brand{display:block;line-height:0}
+.nav-list{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;align-items:center}
+.nav-list a{display:block;padding:.55rem .85rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.97rem;color:var(--azul);position:relative}
+.nav-list a:hover{background:var(--cinza)}
+.nav-list a[aria-current="page"]::after{content:"";position:absolute;left:.85rem;right:.85rem;bottom:.2rem;height:3px;border-radius:3px;background:var(--laranja)}
+.nav-cta{margin-left:.5rem}
+.nav-cta a{background:var(--laranja);color:#fff!important;border-radius:999px;padding:.6rem 1.15rem!important}
+.nav-cta a:hover{background:var(--laranja-2)!important}
+.menu-toggle{display:none;background:none;border:0;padding:.6rem;border-radius:10px;color:var(--azul);cursor:pointer}
+.menu-toggle .icon{width:1.7rem;height:1.7rem}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--azul-3),var(--azul) 55%,var(--azul-2));color:#fff;padding:clamp(3.5rem,8vw,6.5rem) 0}
+.hero::before{content:"";position:absolute;inset:-20% -10%;background:linear-gradient(115deg,transparent 56%,rgba(252,108,4,.5) 56%,rgba(252,108,4,.5) 57.2%,transparent 58.5%,transparent 62%,rgba(255,255,255,.06) 62%,rgba(255,255,255,.06) 75%,transparent 75%);pointer-events:none}
+.hero .container{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:#FFB27A;margin-bottom:1.1rem}
+.eyebrow::before{content:"";width:2rem;height:3px;border-radius:3px;background:var(--laranja)}
+.hero h1{color:#fff;font-size:clamp(2.3rem,5.6vw,4rem);margin-bottom:.45em}
+.hero h1 em{font-style:normal;color:var(--laranja)}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:#D6E1F0;max-width:34em}
+.hero p.lead strong{color:#fff}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.8rem}
+.contact-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--raio);padding:1.6rem;backdrop-filter:blur(4px)}
+.contact-card h2{color:#fff;font-size:1.15rem;margin-bottom:1rem}
+.contact-card ul{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.contact-card li{display:flex;gap:.8rem;align-items:flex-start;color:#D6E1F0;font-size:.98rem}
+.contact-card li .icon{color:var(--laranja);margin-top:.2rem}
+.contact-card a{text-decoration:none;color:#fff;font-weight:600;overflow-wrap:anywhere}
+.contact-card a:hover{text-decoration:underline}
+
+/* Rodapé */
+.site-footer{background:var(--azul-3);color:#B9C8DC;padding:3rem 0 1.5rem;font-size:.97rem}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2.5rem}
+.site-footer h2{color:#fff;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{color:#fff;text-decoration:underline}
+.footer-logo{background:#fff;border-radius:12px;padding:.6rem .9rem;display:inline-block;margin-bottom:1rem}
+.footer-logo img{height:64px;width:auto}
+.social{display:flex;gap:.7rem;margin-top:1rem}
+.social a{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;transition:background .2s}
+.social a:hover{background:var(--laranja);text-decoration:none}
+.footer-bottom{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;font-size:.88rem}
+
+/* Botão flutuante de WhatsApp */
+.wa-float{position:fixed;right:1rem;bottom:1rem;z-index:60;display:none;width:3.4rem;height:3.4rem;border-radius:50%;background:var(--laranja);color:#fff;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.wa-float .icon{width:1.6rem;height:1.6rem}
+
+/* Páginas interiores */
+.page-hero{background:linear-gradient(135deg,var(--azul-3),var(--azul));color:#fff;padding:clamp(2.5rem,6vw,4.5rem) 0;border-bottom:4px solid var(--laranja)}
+.page-hero h1{color:#fff;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 .35em}
+.page-hero p{color:#D6E1F0;max-width:38em;margin:0;font-size:1.1rem}
+.section{padding:clamp(2.5rem,6vw,4.5rem) 0}
+.section-alt{background:var(--cinza)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{background:#fff;border:1px solid var(--cinza);border-top:4px solid var(--laranja);border-radius:var(--raio);padding:1.5rem;box-shadow:var(--sombra)}
+.card h2,.card h3{font-size:1.2rem;margin-bottom:.4em}
+.card p{color:var(--texto-suave);margin:0}
+.prose{max-width:46rem}
+.cta-band{text-align:center}
+.cta-band .btn-ghost{border-color:var(--azul);color:var(--azul)}
+.cta-band .btn-ghost:hover{background:rgba(4,44,84,.08)}
+.cta-band .hero-actions{justify-content:center}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.contact-grid .card li{display:flex;gap:.8rem;align-items:flex-start;list-style:none}
+.contact-grid .card ul{margin:0;padding:0;display:grid;gap:.9rem}
+.contact-grid .icon{color:var(--laranja);margin-top:.2rem}
+.contact-grid a{font-weight:600;text-decoration:none;color:var(--azul);overflow-wrap:anywhere}
+.contact-grid a:hover{text-decoration:underline}
+
+/* Perguntas frequentes */
+.faq-item{border:1px solid var(--cinza);border-radius:var(--raio);margin-bottom:.8rem;background:#fff}
+.faq-item summary{cursor:pointer;padding:1rem 1.2rem;font-weight:700;color:var(--azul);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--laranja);font-size:1.4rem;line-height:1}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item p{margin:0;padding:0 1.2rem 1.1rem;color:var(--texto-suave)}
