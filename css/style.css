@@ -1,20 +1,15 @@
 
-/* =========================================
-   EQUIPA — MARINDZE
-   Estilos exclusivos desta secção
-========================================= */
+/* =====================================
+   SECÇÃO EQUIPA — MARINDZE
+===================================== */
 
 .team-section {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    overflow: hidden;
+    padding: 75px 0;
 }
 
-/* Introdução */
-
 .team-section .team-intro {
-    max-width: 760px;
-    margin: 0 auto 40px;
+    max-width: 720px;
+    margin: 0 auto 45px;
     text-align: center;
 }
 
@@ -22,55 +17,55 @@
     display: inline-block;
     margin-bottom: 12px;
     color: #042C54;
-    font-weight: 700;
-    letter-spacing: 1px;
 }
 
 .team-section .team-intro h2 {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     color: #042C54;
 }
 
 .team-section .team-intro p {
-    max-width: 680px;
+    max-width: 650px;
     margin: 0 auto;
     line-height: 1.8;
 }
 
-/* Galeria */
+/* Organização das fotografias */
 
 .team-section .team-gallery {
     display: grid;
-    grid-template-columns: 1.35fr 0.85fr;
-    gap: 24px;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 28px;
     align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
 }
-
-/* Fotografias */
 
 .team-section .team-photo {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-width: 0;
-    height: 430px;
     margin: 0;
     overflow: hidden;
-    border-radius: 12px;
-    background: #042C54;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(4, 44, 84, 0.10);
 }
 
-/* Imagem principal */
+/* Imagens */
 
-.team-section .team-photo-main {
-    height: 460px;
+.team-section .team-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #f1f4f7;
 }
 
-/* Imagem secundária */
-
-.team-section .team-photo-secondary {
-    height: 460px;
+.team-section .team-photo-main .team-image {
+    height: 390px;
 }
 
-.team-section .team-photo img {
+.team-section .team-image img {
     display: block;
     width: 100%;
     height: 100%;
@@ -79,52 +74,45 @@
     transition: transform 0.4s ease;
 }
 
-.team-section .team-photo:hover img {
-    transform: scale(1.03);
+.team-section .team-photo:hover .team-image img {
+    transform: scale(1.035);
 }
 
-/* Legendas */
+/* Textos abaixo das fotografias */
 
 .team-section .team-photo figcaption {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 50px 22px 22px;
-    color: #fff;
-    background: linear-gradient(
-        to top,
-        rgba(4, 44, 84, 0.95),
-        rgba(4, 44, 84, 0.55),
-        transparent
-    );
+    padding: 22px 24px 25px;
+    border-top: 3px solid #042C54;
 }
 
 .team-section .team-photo figcaption h3 {
-    margin: 0 0 8px;
-    color: #fff;
-    font-size: 20px;
+    margin: 0 0 9px;
+    color: #042C54;
+    font-size: 19px;
 }
 
 .team-section .team-photo figcaption p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: #64748b;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* Tablets */
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
     .team-section .team-gallery {
         grid-template-columns: 1fr 1fr;
         gap: 18px;
     }
 
-    .team-section .team-photo,
-    .team-section .team-photo-main,
-    .team-section .team-photo-secondary {
-        height: 350px;
+    .team-section .team-image,
+    .team-section .team-photo-main .team-image {
+        height: 280px;
+    }
+
+    .team-section .team-photo figcaption {
+        padding: 18px;
     }
 }
 
@@ -132,34 +120,24 @@
 
 @media (max-width: 600px) {
     .team-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 0;
     }
 
     .team-section .team-intro {
-        margin-bottom: 28px;
+        margin-bottom: 30px;
     }
 
     .team-section .team-gallery {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
     }
 
-    .team-section .team-photo,
-    .team-section .team-photo-main,
-    .team-section .team-photo-secondary {
-        height: 320px;
+    .team-section .team-image,
+    .team-section .team-photo-main .team-image {
+        height: 300px;
     }
 
     .team-section .team-photo figcaption {
-        padding: 45px 18px 18px;
-    }
-
-    .team-section .team-photo figcaption h3 {
-        font-size: 18px;
-    }
-
-    .team-section .team-photo figcaption p {
-        font-size: 13px;
+        padding: 18px 20px 22px;
     }
 }
