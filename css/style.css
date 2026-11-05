@@ -1,143 +1,45 @@
+<section class="section team-section">
+  <div class="container">
 
-/* =====================================
-   SECÇÃO EQUIPA — MARINDZE
-===================================== */
+    <div class="team-intro reveal">
+      <span class="section-tag">A nossa equipa</span>
+      <h2>Pessoas dedicadas ao seu negócio</h2>
+      <p>
+        Contamos com uma equipa organizada e orientada para prestar
+        acompanhamento profissional, responder às necessidades dos
+        nossos clientes e apoiar o desenvolvimento dos seus negócios.
+      </p>
+    </div>
 
-.team-section {
-    padding: 75px 0;
-}
+    <div class="team-gallery reveal">
 
-.team-section .team-intro {
-    max-width: 720px;
-    margin: 0 auto 45px;
-    text-align: center;
-}
+      <!-- Fotografia de toda a equipa -->
+      <figure class="team-photo team-photo-main">
+        <img
+          src="../assets/equipa1.jpeg"
+          alt="Equipa da Marindze Consultoria e Serviços"
+          loading="lazy"
+          decoding="async">
+        <figcaption>
+          <h3>A nossa equipa</h3>
+          <p>Profissionais unidos para servir melhor os nossos clientes.</p>
+        </figcaption>
+      </figure>
 
-.team-section .team-intro .section-tag {
-    display: inline-block;
-    margin-bottom: 12px;
-    color: #042C54;
-}
+      <!-- Fotografia do responsável no escritório -->
+      <figure class="team-photo team-photo-secondary">
+        <img
+          src="../assets/equipa2.jpeg"
+          alt="Responsável da Marindze a trabalhar no escritório"
+          loading="lazy"
+          decoding="async">
+        <figcaption>
+          <h3>Trabalho e acompanhamento</h3>
+          <p>Dedicação e atenção em cada actividade desenvolvida.</p>
+        </figcaption>
+      </figure>
 
-.team-section .team-intro h2 {
-    margin-bottom: 16px;
-    color: #042C54;
-}
+    </div>
 
-.team-section .team-intro p {
-    max-width: 650px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-/* Organização das fotografias */
-
-.team-section .team-gallery {
-    display: grid;
-    grid-template-columns: 1.25fr 0.85fr;
-    gap: 28px;
-    align-items: stretch;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.team-section .team-photo {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    margin: 0;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(4, 44, 84, 0.10);
-}
-
-/* Imagens */
-
-.team-section .team-image {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    background: #f1f4f7;
-}
-
-.team-section .team-photo-main .team-image {
-    height: 390px;
-}
-
-.team-section .team-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.4s ease;
-}
-
-.team-section .team-photo:hover .team-image img {
-    transform: scale(1.035);
-}
-
-/* Textos abaixo das fotografias */
-
-.team-section .team-photo figcaption {
-    padding: 22px 24px 25px;
-    border-top: 3px solid #042C54;
-}
-
-.team-section .team-photo figcaption h3 {
-    margin: 0 0 9px;
-    color: #042C54;
-    font-size: 19px;
-}
-
-.team-section .team-photo figcaption p {
-    margin: 0;
-    color: #64748b;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* Tablets */
-
-@media (max-width: 800px) {
-    .team-section .team-gallery {
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-    }
-
-    .team-section .team-image,
-    .team-section .team-photo-main .team-image {
-        height: 280px;
-    }
-
-    .team-section .team-photo figcaption {
-        padding: 18px;
-    }
-}
-
-/* Telemóveis */
-
-@media (max-width: 600px) {
-    .team-section {
-        padding: 50px 0;
-    }
-
-    .team-section .team-intro {
-        margin-bottom: 30px;
-    }
-
-    .team-section .team-gallery {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .team-section .team-image,
-    .team-section .team-photo-main .team-image {
-        height: 300px;
-    }
-
-    .team-section .team-photo figcaption {
-        padding: 18px 20px 22px;
-    }
-}
+  </div>
+</section>
