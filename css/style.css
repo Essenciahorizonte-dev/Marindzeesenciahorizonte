@@ -636,3 +636,115 @@ p {
     padding: 5px;
   }
 }
+/* ==============================
+   EQUIPA MARINDZE
+============================== */
+
+.team-section {
+  overflow: hidden;
+}
+
+.team-intro {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.team-intro .section-tag {
+  display: inline-block;
+  color: #042C54;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.team-intro h2 {
+  color: #042C54;
+  margin-bottom: 15px;
+}
+
+.team-intro p {
+  line-height: 1.8;
+  color: #666;
+}
+
+.team-gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.team-photo {
+  position: relative;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #042C54;
+}
+
+.team-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-photo:hover img {
+  transform: scale(1.035);
+}
+
+.team-photo figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 45px 24px 22px;
+  color: #fff;
+  background: linear-gradient(
+    transparent,
+    rgba(4, 44, 84, 0.92)
+  );
+}
+
+.team-photo figcaption h3 {
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.team-photo figcaption p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.team-photo-main img {
+  min-height: 470px;
+}
+
+.team-photo-secondary img {
+  min-height: 470px;
+}
+
+/* Adaptação para telemóveis */
+@media (max-width: 768px) {
+  .team-intro {
+    margin-bottom: 30px;
+  }
+
+  .team-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-photo img,
+  .team-photo-main img,
+  .team-photo-secondary img {
+    min-height: 280px;
+    max-height: 380px;
+  }
+
+  .team-photo figcaption {
+    padding: 35px 18px 18px;
+  }
+}
