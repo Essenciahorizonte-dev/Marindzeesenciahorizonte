@@ -1,252 +1,165 @@
 
 /* =========================================
-   SECÇÃO EQUIPA — MARINDZE
+   EQUIPA — MARINDZE
+   Estilos exclusivos desta secção
 ========================================= */
 
 .team-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background: #ffffff;
+    padding-top: 70px;
+    padding-bottom: 70px;
     overflow: hidden;
 }
 
-/* INTRODUÇÃO */
+/* Introdução */
 
-.team-intro {
+.team-section .team-intro {
     max-width: 760px;
-    margin: 0 auto 45px;
+    margin: 0 auto 40px;
     text-align: center;
 }
 
-.team-intro .section-tag {
+.team-section .team-intro .section-tag {
     display: inline-block;
     margin-bottom: 12px;
     color: #042C54;
-    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.team-intro h2 {
-    margin: 0 0 16px;
+.team-section .team-intro h2 {
+    margin-bottom: 15px;
     color: #042C54;
-    font-size: clamp(26px, 4vw, 36px);
-    line-height: 1.25;
-    font-weight: 700;
 }
 
-.team-intro p {
+.team-section .team-intro p {
     max-width: 680px;
     margin: 0 auto;
-    color: #64748b;
-    font-size: 16px;
     line-height: 1.8;
 }
 
-/* GALERIA */
+/* Galeria */
 
-.team-gallery {
+.team-section .team-gallery {
     display: grid;
-    grid-template-columns: 1.4fr 0.85fr;
+    grid-template-columns: 1.35fr 0.85fr;
     gap: 24px;
     align-items: stretch;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
-/* CARTÕES DAS FOTOGRAFIAS */
+/* Fotografias */
 
-.team-photo {
+.team-section .team-photo {
     position: relative;
-    display: flex;
     min-width: 0;
-    min-height: 430px;
+    height: 430px;
     margin: 0;
     overflow: hidden;
     border-radius: 12px;
     background: #042C54;
-    box-shadow: 0 8px 25px rgba(4, 44, 84, 0.10);
 }
 
-/* IMAGENS */
+/* Imagem principal */
 
-.team-photo img {
+.team-section .team-photo-main {
+    height: 460px;
+}
+
+/* Imagem secundária */
+
+.team-section .team-photo-secondary {
+    height: 460px;
+}
+
+.team-section .team-photo img {
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 430px;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
-/* DESTAQUE DA EQUIPA COMPLETA */
-
-.team-photo-main {
-    min-height: 460px;
+.team-section .team-photo:hover img {
+    transform: scale(1.03);
 }
 
-.team-photo-main img {
-    min-height: 460px;
-}
+/* Legendas */
 
-/* FOTOGRAFIA DO ESCRITÓRIO */
-
-.team-photo-secondary {
-    min-height: 460px;
-}
-
-.team-photo-secondary img {
-    min-height: 460px;
-}
-
-/* EFEITO AO PASSAR O RATO */
-
-.team-photo:hover img {
-    transform: scale(1.04);
-}
-
-/* LEGENDA DAS FOTOGRAFIAS */
-
-.team-photo figcaption {
+.team-section .team-photo figcaption {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
-    padding: 55px 25px 24px;
-    color: #ffffff;
+    padding: 50px 22px 22px;
+    color: #fff;
     background: linear-gradient(
         to top,
-        rgba(4, 44, 84, 0.96),
-        rgba(4, 44, 84, 0.55) 65%,
+        rgba(4, 44, 84, 0.95),
+        rgba(4, 44, 84, 0.55),
         transparent
     );
 }
 
-.team-photo figcaption h3 {
+.team-section .team-photo figcaption h3 {
     margin: 0 0 8px;
-    color: #ffffff;
-    font-size: 21px;
-    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
 }
 
-.team-photo figcaption p {
+.team-section .team-photo figcaption p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.92);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     line-height: 1.6;
 }
 
-/* =========================================
-   TABLETS
-========================================= */
+/* Tablets */
 
-@media (max-width: 900px) {
-
-    .team-gallery {
+@media (max-width: 850px) {
+    .team-section .team-gallery {
         grid-template-columns: 1fr 1fr;
         gap: 18px;
     }
 
-    .team-photo,
-    .team-photo-main,
-    .team-photo-secondary {
-        min-height: 360px;
-    }
-
-    .team-photo img,
-    .team-photo-main img,
-    .team-photo-secondary img {
-        min-height: 360px;
-    }
-
-    .team-photo figcaption {
-        padding: 45px 18px 20px;
-    }
-
-    .team-photo figcaption h3 {
-        font-size: 18px;
+    .team-section .team-photo,
+    .team-section .team-photo-main,
+    .team-section .team-photo-secondary {
+        height: 350px;
     }
 }
 
-/* =========================================
-   TELEMÓVEIS
-========================================= */
+/* Telemóveis */
 
 @media (max-width: 600px) {
-
     .team-section {
-        padding-top: 55px;
-        padding-bottom: 55px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
-    .team-intro {
-        margin-bottom: 30px;
-        padding: 0 5px;
+    .team-section .team-intro {
+        margin-bottom: 28px;
     }
 
-    .team-intro p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .team-gallery {
+    .team-section .team-gallery {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .team-photo,
-    .team-photo-main,
-    .team-photo-secondary {
-        min-height: 300px;
-        border-radius: 10px;
+    .team-section .team-photo,
+    .team-section .team-photo-main,
+    .team-section .team-photo-secondary {
+        height: 320px;
     }
 
-    .team-photo img,
-    .team-photo-main img,
-    .team-photo-secondary img {
-        width: 100%;
-        height: 300px;
-        min-height: 300px;
-        object-fit: cover;
-    }
-
-    .team-photo figcaption {
+    .team-section .team-photo figcaption {
         padding: 45px 18px 18px;
     }
 
-    .team-photo figcaption h3 {
+    .team-section .team-photo figcaption h3 {
         font-size: 18px;
     }
 
-    .team-photo figcaption p {
+    .team-section .team-photo figcaption p {
         font-size: 13px;
     }
 }
-
-/* =========================================
-   ECRÃS MUITO PEQUENOS
-========================================= */
-
-@media (max-width: 380px) {
-
-    .team-photo,
-    .team-photo-main,
-    .team-photo-secondary {
-        min-height: 260px;
-    }
-
-    .team-photo img,
-    .team-photo-main img,
-    .team-photo-secondary img {
-        height: 260px;
-        min-height: 260px;
-    }
-
-    .team-photo figcaption h3 {
-        font-size: 16px;
-    }
-}
-
